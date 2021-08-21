@@ -25,3 +25,8 @@ etf_client = EtfClient(api_key=g_api_key, secret_key=g_secret_key)
 subuser_client = SubuserClient(api_key=g_api_key, secret_key=g_secret_key)
 trade_client = TradeClient(api_key=g_api_key, secret_key=g_secret_key)
 wallet_client = WalletClient(api_key=g_api_key, secret_key=g_secret_key)
+
+
+# 获取账户余额
+account_balance_list = account_client.get_account_balance()
+LogInfo.output_list(account_balance_list)

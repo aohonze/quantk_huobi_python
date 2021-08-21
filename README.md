@@ -1,13 +1,17 @@
 # QuantK Huobi Python
 
-This is a personal Huobi Python trade app repository, and modified from the official python SDK and the original is: https://github.com/HuobiRDCenter/huobi_Python. Therefore, all the request methods in the APP come from the official SDK, and we implement our trading APP based on these tool functions.
+This is a personal Huobi Python trade app repository, modified from the Huobi Python SDK and the original is:
+https://github.com/HuobiRDCenter/huobi_Python.
+
+Therefore, you'll find that all the request methods in the APP come from the official SDK. Based on these tool functions, we can implement our trading strategy conveniently.
+
 ## Quick Start
 
 *The APP is compiled by Python 3.7 and above*
 
 You can download and open the source code directly in your python project, and then you can follow below steps:
 
-* Create the client instance.
+* Create the client instance such as the `quantk.py` file did.
 * Call the interfaces provided by client.
 
 ```python
@@ -24,9 +28,11 @@ LogInfo.output_list(list_obj)
 
 ## Usage
 
-After above section, this SDK should be already download to your local machine, this section introduce this SDK and how to use it correctly.
+After above section, this APP should be already download to your local machine, this section introduce the HuoBi Python SDK and how to use it correctly.
 
-### Folder structure
+The Official Huobi API document may help you to use this SDK: https://huobiapi.github.io/docs/spot/v1/en/#introduction
+
+### File & Folder structure
 
 This is the folder and package structure of SDK source code and the description
 
@@ -41,14 +47,14 @@ This is the folder and package structure of SDK source code and the description
 - **performance**: This is for internal performance testing
 - **tests**: This is for internal functional testing
 - **example**: The main package is defined here, it provides the examples how to use **client** instance to access API and read response.
-
+- **quantk.py**: The entry for custom use of the SDK, code your trade strategy here.
 ### Run examples
 
 This SDK provides examples that under **/example** folder, if you want to run the examples to access private data, you need below additional steps:
 
 1. Create an **API Key** first from Huobi official website
 2. Create **privateconfig.py** into your **huobi** folder. The purpose of this file is to prevent submitting SecretKey into repository by accident, so this file is already added in the *.gitignore* file. 
-3. Assign your API access key and secret key to as below:
+3. Assign your API access key and secret key to `./huobi/constant/test.py` as below:
 ```python
 p_api_key = "hrf5gdfghe-e74bebd8-2f4a33bc-e7963"
 p_secret_key = "fecbaab2-35befe7e-2ea695e8-67e56"
@@ -60,7 +66,7 @@ Regarding the difference between public data and private data you can find detai
 
 ### Client
 
-In this SDK, the client is the struct to access the Huobi API. In order to isolate the private data with public data, and isolated different kind of data, the client category is designated to match the API category. 
+In the HuoBi Python SDK, the client is the struct to access the Huobi API. In order to isolate the private data with public data, and isolated different kind of data, the client category is designated to match the API category. 
 
 All the client is listed in below table. Each client is very small and simple, it is only responsible to operate its related data, you can pick up multiple clients to create your own application based on your business.
 
