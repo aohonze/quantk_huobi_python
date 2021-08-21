@@ -11,6 +11,7 @@ huobi_client.egg-info/
 __pycache__
 *.pyc
 huobi/privateconfig.py
+huobi/constant/test.py
 
 ### Other ###
 .DS_Store
