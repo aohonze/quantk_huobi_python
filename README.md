@@ -1,11 +1,9 @@
-# QuantK huobi_python
+# QuantK Huobi Python
 
-This is a personal Huobi Python SDK Tools repositories and the original is: https://github.com/HuobiRDCenter/huobi_Python
-
-
+This is a personal Huobi Python trade app repository, and modified from the official python SDK and the original is: https://github.com/HuobiRDCenter/huobi_Python. Therefore, all the request methods in the APP come from the official SDK, and we implement our trading APP based on these tool functions.
 ## Quick Start
 
-*The SDK is compiled by Python 3.7 and above*
+*The APP is compiled by Python 3.7 and above*
 
 You can download and open the source code directly in your python project, and then you can follow below steps:
 
